@@ -26,5 +26,12 @@ namespace GZScanner
                 
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+            list.Add(textBox3.Text + "." +  textBox4.Text + "." + textBox5.Text + "." +textBox6.Text);
+            listBox1.Items.Add(list[0]);
+        }
     }
 }
