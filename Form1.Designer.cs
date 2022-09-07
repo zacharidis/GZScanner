@@ -33,10 +33,7 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -53,7 +50,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,9 +81,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Location = new System.Drawing.Point(14, 36);
@@ -97,41 +91,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Scanning Options";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(441, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 39);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Scan Them All";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(358, 83);
+            this.button1.Location = new System.Drawing.Point(358, 42);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 39);
+            this.button1.Size = new System.Drawing.Size(152, 80);
             this.button1.TabIndex = 3;
             this.button1.Text = "Ping Them All";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Location = new System.Drawing.Point(352, 28);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(162, 47);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Specific Port";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "80";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox4
             // 
@@ -152,6 +120,7 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(41, 23);
             this.textBox10.TabIndex = 4;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // textBox9
             // 
@@ -159,6 +128,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(41, 23);
             this.textBox9.TabIndex = 3;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // textBox8
             // 
@@ -166,6 +136,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(41, 23);
             this.textBox8.TabIndex = 2;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox7
             // 
@@ -173,6 +144,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(41, 23);
             this.textBox7.TabIndex = 1;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // groupBox3
             // 
@@ -194,6 +166,7 @@
             this.textBox6.Size = new System.Drawing.Size(41, 23);
             this.textBox6.TabIndex = 3;
             this.textBox6.Text = "1";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox5
             // 
@@ -202,6 +175,7 @@
             this.textBox5.Size = new System.Drawing.Size(41, 23);
             this.textBox5.TabIndex = 2;
             this.textBox5.Text = "1";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -210,6 +184,7 @@
             this.textBox4.Size = new System.Drawing.Size(41, 23);
             this.textBox4.TabIndex = 1;
             this.textBox4.Text = "168";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox3
             // 
@@ -250,7 +225,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(60, 40);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "About";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -270,8 +245,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -291,11 +264,8 @@
         private GroupBox groupBox2;
         private ListBox listBox1;
         private Button button1;
-        private GroupBox groupBox5;
-        private TextBox textBox1;
         private GroupBox groupBox4;
         private GroupBox groupBox3;
-        private Button button2;
         private TextBox textBox10;
         private TextBox textBox9;
         private TextBox textBox8;
